@@ -12,7 +12,7 @@
 - **Validación de límites**: Verificar si estamos dentro del tablero y en casilla válida
 - **Propagación de éxito**: Cuando una rama recursiva encuentra solución, se propaga hacia arriba
 
-**Aplicación al Caballo:** Base para implementar los modos `open`, `closed` y `count`.
+**Aplicación:** Base para implementar los modos `open`, `closed` y `count`.
 
 ### 2. [`2-parque.c`](2-parque.c) - BFS en grafo
 **Herramientas que proporciona:**
@@ -21,7 +21,7 @@
 - **Control de visitados**: Evitar ciclos infinitos
 - **Cálculo de distancias**: `dist[v] = dist[u] + 1`
 
-**Aplicación al Caballo:** Esencial para el modo `shortest` - encontrar el menor número de movimientos.
+**Aplicación:** Esencial para el modo `shortest` - encontrar el menor número de movimientos.
 
 ### 3. [`3-playlist.c`](3-playlist.c) - Lista doblemente enlazada
 **Herramientas que proporciona:**
@@ -29,7 +29,7 @@
 - **Estructura de secuencias**: Almacenar la secuencia de movimientos del caballo
 - **Navegación bidireccional**: Útil para reconstruir caminos
 
-**Aplicación al Caballo:** Almacenar y mostrar la secuencia de coordenadas del recorrido.
+**Aplicación:** Almacenar y mostrar la secuencia de coordenadas del recorrido.
 
 ### 4. [`4-guardaBosques.c`](4-guardaBosques.c) - Árbol binario de búsqueda
 **Herramientas que proporciona:**
@@ -37,7 +37,7 @@
 - **Gestión de memoria dinámica**: Crear y manejar estructuras complejas
 - **Recorrido sistemático**: Patrón de visita ordenado
 
-**Aplicación al Caballo:** Refuerza los patrones recursivos necesarios para explorar todas las posibilidades.
+**Aplicación:** Refuerza los patrones recursivos necesarios para explorar todas las posibilidades.
 
 ---
 
@@ -195,7 +195,7 @@ Atracción 5 a distancia 3  (3 saltos: 0→2→4→5)
 
 ### Para `3-playlist.c` (Lista enlazada):
 
-#### 🎵 Explicación de la estructura del nodo:
+#### Explicación de la estructura del nodo:
 ```c
 typedef struct Nodo {
     char cancion[30];        // Nombre de la canción (hasta 29 caracteres + \0)
