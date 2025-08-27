@@ -17,7 +17,7 @@ void insertar(Nodo **head, char *nombre){
 
 void recorrer(Nodo *cur){
     while(cur){
-        printf("▶ %s\n", cur->cancion);
+        printf("PLAY %s\n", cur->cancion);
         cur=cur->sig;
     }
 }

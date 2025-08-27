@@ -37,10 +37,11 @@ int mover(int x, int y) {
 }
 
 int main(void) {
+    int i, j;  /* Declarar variables al inicio de la función */
     if (mover(0,0)) {
         printf("Camino encontrado (1 = camino):\n");
-        for (int i=0;i<N;i++) {
-            for (int j=0;j<N;j++) printf("%d ", sol[i][j]);
+        for (i=0; i<N; i++) {
+            for (j=0; j<N; j++) printf("%d ", sol[i][j]);
             printf("\n");
         }
     } else {

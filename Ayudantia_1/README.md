@@ -31,7 +31,7 @@
 
 **Aplicación:** Almacenar y mostrar la secuencia de coordenadas del recorrido.
 
-### 4. [`4-guardaBosques.c`](4-guardaBosques.c) - Árbol binario de búsqueda
+### 4. [`4-guardaBosque.c`](4-guardaBosque.c) - Árbol binario de búsqueda
 **Herramientas que proporciona:**
 - **Recursión en estructuras**: Patrón de diseño recursivo
 - **Gestión de memoria dinámica**: Crear y manejar estructuras complejas
@@ -278,7 +278,7 @@ void recorrer(Nodo *cur){
 <b>R9.2:</b> Podríamos usar <code>cur = cur->ant</code> en lugar de <code>cur = cur->sig</code> para ir hacia atrás, pero necesitaríamos primero llegar al último nodo.
 </details>
 
-### Para `4-guardaBosques.c` (Árbol BST):
+### Para `4-guardaBosque.c` (Árbol BST):
 
 #### Explicación de la estructura del nodo:
 ```c
@@ -374,7 +374,7 @@ inorder([8]) → imprime "8"
 <b>R11.3:</b> Sería completamente desbalanceado (una "lista" hacia la derecha), pero el recorrido inorder seguiría dando el mismo resultado ordenado.
 </details>
 
-### Preguntas integradoras para el problema del Caballo:
+### Preguntas integradoras para otros problemas similares:
 
 **P12:** ¿Cómo combinarías backtracking (del ratón) con BFS para resolver el problema del caballo?
 <details>
@@ -384,7 +384,7 @@ inorder([8]) → imprime "8"
 
 **P13:** ¿Cuál sería la principal diferencia entre el modo `open` y `closed` del caballo?
 <details>
-<summary>👁️ Ver respuesta</summary>
+<summary> Ver respuesta</summary>
 <b>R13:</b> En <code>closed</code>, además de visitar todas las casillas, la posición final debe estar a un movimiento de caballo de la posición inicial.
 </details>
 

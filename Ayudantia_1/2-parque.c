@@ -34,18 +34,19 @@ int desencolar(Cola *q){
 
 void BFS(int s){
     int vis[N]={0}, dist[N]={0};
+    int u, v, i;  /* Declarar variables al inicio */
     Cola q={NULL,NULL};
     vis[s]=1; encolar(&q,s);
     while(q.f){
-        int u=desencolar(&q);
-        for(int v=0;v<N;v++){
+        u=desencolar(&q);
+        for(v=0;v<N;v++){
             if(grafo[u][v] && !vis[v]){
                 vis[v]=1; dist[v]=dist[u]+1;
                 encolar(&q,v);
             }
         }
     }
-    for(int i=0;i<N;i++) printf("Atracción %d a distancia %d\n",i,dist[i]);
+    for(i=0;i<N;i++) printf("Atracción %d a distancia %d\n",i,dist[i]);
 }
 
 int main(){ BFS(0); return 0; }
