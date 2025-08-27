@@ -45,7 +45,7 @@
 
 ### Para `1-remy.c` (Backtracking):
 
-#### 🏗️ Explicación de las estructuras de datos:
+#### Explicación de las estructuras de datos:
 ```c
 static int laberinto[N][N] = {
     {0, 1, 0, 0},  // Fila 0: libre, pared, libre, libre
@@ -72,14 +72,14 @@ Laberinto:          Objetivo sol[]:
 Leyenda: . = libre, ■ = pared, S = inicio, M = meta, 1 = camino
 ```
 
-#### 🔍 Variables y lógica del backtracking:
+#### Variables y lógica del backtracking:
 - **`x, y`**: **Coordenadas actuales** en el laberinto
 - **`sol[x][y] = 1`**: **Marcar** casilla como parte del camino actual
 - **`sol[x][y] = 0`**: **Desmarcar** casilla (backtracking)
 - **Condición de éxito**: `x == N-1 && y == N-1` (llegar a la esquina inferior derecha)
 - **Movimientos**: Solo hacia **abajo** (`x+1, y`) y **derecha** (`x, y+1`)
 
-#### 🎯 Flujo del algoritmo:
+#### Flujo del algoritmo:
 1. **Verificar si llegamos a la meta** → Si sí, marcar y retornar éxito
 2. **Validar casilla actual** → Debe estar en límites, ser libre y no visitada
 3. **Marcar casilla** → `sol[x][y] = 1`
@@ -208,7 +208,7 @@ typedef struct Nodo {
 - **`*sig`**: Puntero al **siguiente** nodo (hacia adelante)
 - **`*ant`**: Puntero al nodo **anterior** (hacia atrás)
 
-#### 🔗 Funcionamiento de la inserción:
+#### Funcionamiento de la inserción:
 ```c
 void insertar(Nodo **head, char *nombre){
     Nodo* n=malloc(sizeof(Nodo));  // 1. Crear nuevo nodo
@@ -234,12 +234,12 @@ Después de insertar("Song A"):
 [Song A] ⇄ [Song B] ⇄ [Song C] → NULL
 ```
 
-#### 🎯 Variables importantes:
+#### Variables importantes:
 - **`**head`**: Puntero al puntero de la cabeza (permite modificar la cabeza)
 - **`*nombre`**: Puntero al string con el nombre de la canción
 - **`*cur`**: Cursor para recorrer la lista desde el inicio
 
-#### 🚶 Lógica del recorrido:
+#### Lógica del recorrido:
 ```c
 void recorrer(Nodo *cur){
     while(cur){                    // Mientras no sea NULL
@@ -280,7 +280,7 @@ void recorrer(Nodo *cur){
 
 ### Para `4-guardaBosques.c` (Árbol BST):
 
-#### 🌳 Explicación de la estructura del nodo:
+#### Explicación de la estructura del nodo:
 ```c
 typedef struct Nodo {
     int val;                    // Valor almacenado en el nodo
@@ -292,7 +292,7 @@ typedef struct Nodo {
 - **Hijo izquierdo**: Todos los valores **menores** que el nodo actual
 - **Hijo derecho**: Todos los valores **mayores o iguales** que el nodo actual
 
-#### 🏗️ Funcionamiento de la inserción recursiva:
+#### Funcionamiento de la inserción recursiva:
 ```c
 Nodo* insertar(Nodo* r,int v){
     if(!r) return nuevo(v);           // Caso base: crear nuevo nodo
@@ -302,7 +302,7 @@ Nodo* insertar(Nodo* r,int v){
 }
 ```
 
-#### 🌲 Construcción paso a paso del árbol:
+#### Construcción paso a paso del árbol:
 ```
 Secuencia de inserción: 5, 2, 8, 1, 3
 
@@ -319,7 +319,7 @@ Paso 4: insertar(1)     Paso 5: insertar(3)
  [1]                    [1]  [3]
 ```
 
-#### 🎯 Recorrido Inorder (izquierda → raíz → derecha):
+#### Recorrido Inorder (izquierda → raíz → derecha):
 ```c
 void inorder(Nodo* r){
     if(r){                    // Si el nodo existe
@@ -339,7 +339,7 @@ inorder([5]) → imprime "5"
 inorder([8]) → imprime "8"
 ```
 
-#### 🔍 Variables importantes:
+#### Variables importantes:
 - **`r`**: Puntero a la **raíz** del (sub)árbol actual
 - **`v`**: **Valor** a insertar
 - **`raiz`**: Puntero a la raíz del árbol completo
